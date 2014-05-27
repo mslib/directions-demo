@@ -77,8 +77,13 @@ return array(
             'driving-directions' => array(
                 'name'              => 'directions/json',
                 'request'           => array(
-                    'name_in_uri'   => true, // (e.g. http://maps.googleapis.com/maps/api/directions/json)
-                    'type'                     => 'UrlEncoded', 
+                    'type'                     => 'UrlEncoded',
+                    'adds_on'       => array(
+                        array( // (e.g. http://maps.googleapis.com/maps/api/directions/json)
+                            'type'    => 'plain',
+                            'content' => 'directions/json'
+                        ),
+                    ),
                     'method'                   => 'GET', 
                     'parameters'               => array( 
                         'origin'      => '', // default value for each parameter; default values will be overriden with the values passed in the execute method
@@ -240,8 +245,13 @@ return array(
             'driving-directions' => array(
                 'name'              => 'directions/json',
                 'request'           => array(
-                    'name_in_uri'   => true, // if true, the action name will be part of the uri (i.e. host + name) (e.g. http://maps.googleapis.com/maps/api/directions/json)
-                    'type'                     => 'UrlEncoded', 
+                    'type'                     => 'UrlEncoded',
+                    'adds_on'       => array(
+                        array( // (e.g. http://maps.googleapis.com/maps/api/directions/json)
+                            'type'    => 'plain',
+                            'content' => 'directions/json'
+                        ),
+                    ),
                     'method'                   => 'GET', 
                     'parameters'               => array( 
                         'origin'      => '', 
@@ -300,8 +310,13 @@ return array(
             'driving-directions' => array(
                 'name'              => 'directions/json',
                 'request'           => array(
-                    'name_in_uri'   => true, // if true, the action name will be part of the uri (i.e. host + name) (e.g. http://maps.googleapis.com/maps/api/directions/json)
-                    'type'                     => 'UrlEncoded', 
+                    'type'                     => 'UrlEncoded',
+                    'adds_on'       => array(
+                        array( // (e.g. http://maps.googleapis.com/maps/api/directions/json)
+                            'type'    => 'plain',
+                            'content' => 'directions/json'
+                        ),
+                    ),
                     'method'                   => 'GET', 
                     'parameters'               => array( 
                         'origin'      => '', 
