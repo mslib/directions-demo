@@ -36,8 +36,13 @@ return array(
             'driving-directions' => array(
                 'name'              => 'directions/json',
                 'request'           => array(
-                    'name_in_uri'   => true, // (optional) true is the default value; if true, the action name will be part of the uri (i.e. host + name) (e.g. http://maps.googleapis.com/maps/api/directions/json)
                     'type'                     => 'UrlEncoded', // Default values are 'UrlEncoded', 'PostText', 'Xml'.
+                    'adds_on'       => array(
+                        array(
+                            'type'    => 'plain',
+                            'content' => 'directions/json'
+                        ),
+                    ),
                     'method'                   => 'GET', // (optional) POST is the default value
                     'parameters'               => array( // (optional) array containing all request parameters (this array will be merged with the action_parameters defined above)
                         'origin'      => '', // put here a default value for each parameter; note that the default values will be overriden with the values passed in the execute method
@@ -57,8 +62,13 @@ return array(
             'driving-directions' => array(
                 'name'              => 'directions/xml',
                 'request'           => array(
-                    'name_in_uri'   => true, // (optional) true is the default value; if true, the action name will be part of the uri (i.e. host + name) (e.g. http://maps.googleapis.com/maps/api/directions/json)
                     'type'                     => 'UrlEncoded', // Default values are 'UrlEncoded', 'PostText', 'Xml'.
+                    'adds_on'       => array(
+                        array(
+                            'type'    => 'plain',
+                            'content' => 'directions/json'
+                        ),
+                    ),
                     'method'                   => 'GET', // (optional) POST is the default value
                     'parameters'               => array( // (optional) array containing all request parameters (this array will be merged with the action_parameters defined above)
                         'origin'      => '', // put here a default value for each parameter; note that the default values will be overriden with the values passed in the execute method
