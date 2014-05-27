@@ -1,0 +1,13 @@
+{
+    "name": "mslib/directions-demo",
+    "license": "GLP v2",
+    "type": "project",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "mslib/remote-host": "dev-master"
+    },
+    "minimum-stability": "dev"
+}
