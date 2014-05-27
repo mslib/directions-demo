@@ -66,7 +66,7 @@ return array(
                     'adds_on'       => array(
                         array(
                             'type'    => 'plain',
-                            'content' => 'directions/json'
+                            'content' => 'directions/xml'
                         ),
                     ),
                     'method'                   => 'GET', // (optional) POST is the default value
