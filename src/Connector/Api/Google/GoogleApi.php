@@ -1,13 +1,13 @@
 <?php
 /**
- * Google Api implementation
+ * This file is part of the DirectionsDemo package.
  *
- * PHP version 5
+ * (c) Marco Spallanzani <mslib.code@gmail.com>
  *
- * @category  Google
- * @package   Connector\Api\Google
- * @author    "Marco Spallanzani" <mslib.code@gmail.com>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
+
 namespace Connector\Api\Google;
 
 use Msl\RemoteHost\Api\AbstractHostApi;

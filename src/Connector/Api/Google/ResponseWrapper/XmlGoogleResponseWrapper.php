@@ -1,13 +1,13 @@
 <?php
 /**
- * Xml Response Wrapper for Google Actions
+ * This file is part of the DirectionsDemo package.
  *
- * PHP version 5
+ * (c) Marco Spallanzani <mslib.code@gmail.com>
  *
- * @category  Google\ResponseWrapper
- * @package   Connector\Api\Google\ResponseWrapper
- * @author    "Marco Spallanzani" <mslib.code@gmail.com>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
+
 namespace Connector\Api\Google\ResponseWrapper;
 
 use Msl\RemoteHost\Response\Wrapper\AbstractResponseWrapper;
