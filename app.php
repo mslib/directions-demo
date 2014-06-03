@@ -21,13 +21,16 @@ namespace {
     $googleApi = new \Connector\Api\Google\GoogleApi();
 
     $responseWrapper = $googleApi->getRoutes('Toronto', 'Montreal', 'true');
-
-    if ($responseWrapper instanceof Msl\RemoteHost\Response\Wrapper\AbstractResponseWrapper && $responseWrapper->getStatus()) {
-        echo "SUCCESS!";
+    if ($responseWrapper instanceof Msl\RemoteHost\Response\Wrapper\AbstractResponseWrapper) {
+        if ($responseWrapper->getStatus()) {
+            echo "SUCCESS!" . PHP_EOL;
+        } else {
+            echo "FAIL!" . PHP_EOL;
+        }
+        echo $responseWrapper->getReturnCode() . PHP_EOL;
+        echo $responseWrapper->getReturnMessage() . PHP_EOL;
     } else {
-        echo "FAIL!";
+        echo "FAIL! Unexpected response object" . PHP_EOL;
     }
-
-    var_dump($responseWrapper->getRawData());
 }
 
