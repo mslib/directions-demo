@@ -77,7 +77,7 @@ return array(
             'driving-directions' => array(
                 'name'              => 'directions/json',
                 'request'           => array(
-                    'type'                     => 'UrlEncoded',
+                    'type'          => 'UrlEncoded',
                     'adds_on'       => array(
                         array( // (e.g. http://maps.googleapis.com/maps/api/directions/json)
                             'type'    => 'plain',
@@ -310,7 +310,7 @@ return array(
             'driving-directions' => array(
                 'name'              => 'directions/json',
                 'request'           => array(
-                    'type'                     => 'UrlEncoded',
+                    'type'          => 'UrlEncoded',
                     'adds_on'       => array(
                         array( // (e.g. http://maps.googleapis.com/maps/api/directions/json)
                             'type'    => 'plain',
@@ -339,9 +339,9 @@ return array(
 It is interesting to point out that the main purpose of the Wrapper objects is to define different behaviour of 
 extracting information from a given response array. All responses are automatically converted to an array (Json and Xml responses 
 are converted to an array by the library), but the way we extract the status and routes information is different 
-according to the choosen response type. 
+according to the chosen response type.
 
-Infact, the Xml response structure consists of two main top level tags (***status*** and ***route***), whereas the Json response 
+In fact, the Xml response structure consists of two main top level tags (***status*** and ***route***), whereas the Json response
 structure consists of two main top level indexes (***status*** and ***routes*** - for the xml it's ***route*** without ending ***s***!). 
 
 So the need of two different Response Wrapper objects is because of this difference in the xml and json response structure. 
