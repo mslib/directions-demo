@@ -27,21 +27,15 @@ abstract class AbstractGoogleResponseWrapper extends AbstractResponseWrapper
     const STATUS_OK = "OK";
 
     /**
-     * Initializes the object fields with the given raw data
-     *
-     * @param array                    $rawData        array containing the response raw data
-     * @param ActionResponseInterface  $actionResponse the action response object from which to extract additional information
+     * Inits the status field from the response
      *
      * @return mixed
      */
-    public function init(array $rawData, ActionResponseInterface $actionResponse)
+    public function initStatusFromResponse()
     {
-        // Setting raw data field
-        $this->rawData = $rawData;
-
         // Setting status
-        if (is_array($rawData) && isset($rawData['status'])) {
-            if ($rawData['status'] === self::STATUS_OK) {
+        if (is_array($this->rawData) && isset($this->rawData['status'])) {
+            if ($this->rawData['status'] === self::STATUS_OK) {
                 $this->status = true;
             } else {
                 $this->status = false;
@@ -49,11 +43,6 @@ abstract class AbstractGoogleResponseWrapper extends AbstractResponseWrapper
         } else {
             $this->status = false;
         }
-
-        // Setting return code and return message
-        $response = $actionResponse->getResponse();
-        $this->returnCode    = $response->getStatusCode();
-        $this->returnMessage = $response->getReasonPhrase();
     }
 
     /**
